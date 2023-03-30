@@ -6,11 +6,13 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+//Coloca a entidade como tabela que vai ser utilizada
 @Document(collection="user")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	//Linka o atributo como ID para o banco de dados
 	@Id
 	private String id;
 	private String name;
