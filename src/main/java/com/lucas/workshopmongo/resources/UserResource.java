@@ -49,4 +49,10 @@ public class UserResource {
 		//Retorna o codigo 201 quando cria um novo recurso e com um cabealho contendo o novo recurso criado.
 		return ResponseEntity.created(uri).build();
 	}
+	
+	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
+	public ResponseEntity<Void> delete(@PathVariable String id) {
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
 }
